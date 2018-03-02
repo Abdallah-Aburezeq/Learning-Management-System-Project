@@ -1,14 +1,14 @@
 <?php
     require 'authentication.lib';
     require 'db.lib';
-    if(!$connection = @ mysqli_connect("localhost", "root", "toor"))
+    if(!$connection = @ mysqli_connect("localhost", "root"))
         die("Cannot connect to database");
     
     // Clean data from login
     
-  //  $username = mysqlclean($_POST, username, $connection);
-  //  $password = mysqlclean($_POST, password, $connection);
-    
+$username = mysqlclean($_POST, 'username', 10, $connection);
+$password = mysqlclean($_POST, 'password', 10, $connection);
+        
     session_start();
     // Validate username and password
     if (authenticateUser($connection, $username, $password)) {
