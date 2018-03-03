@@ -4,7 +4,7 @@
 
    function showerror()
    {
-      die("Error " . mysqli_errno($connection) . " : " . mysqli_error($connection));
+      die("Error: Something Happened");
    }
 
    function mysqlclean($array, $index, $maxlength, $connection)

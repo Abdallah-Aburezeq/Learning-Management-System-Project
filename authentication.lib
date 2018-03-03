@@ -8,19 +8,16 @@ function authenticateUser($connection, $username, $password)
 
   // Create a digest of the password collected from
   // the challenge
+  $password_digest = md5(trim($password));
 
-//  $password_digest = md5(trim($password));
-	$password_digest = $password;
   // Formulate the SQL find the user
-  $query = "SELECT password FROM users WHERE username = '{$username}'
-            AND password = '{$password_digest}'";
+  $query = "SELECT password FROM users WHERE username = '$username'
+            AND password = '$password_digest'";
 
   // Execute the query
-//  if (!$result = @ mysqli_query ($query, $connection)) {
-//    showerror( );
-//  }
+  if (!$result = @ mysqli_query ($connection, $query))
+    showerror();
 
-$result = @ mysqli_query ($query, $connection);
   // exactly one row? then we have found the user
   if (mysqli_num_rows($result) != 1)
     return false;
@@ -34,7 +31,7 @@ $result = @ mysqli_query ($query, $connection);
 function sessionAuthenticate()
 {
   // Check if the user hasn't logged in
-  if (!isset($_SESSION["username"]))
+  if (!isset($_SESSION["loginUsername"]))
   {
     // The request does not identify a session
     $_SESSION["message"] = "You are not authorized to access the URL 

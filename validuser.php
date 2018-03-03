@@ -1,13 +1,13 @@
 <?php
     require 'authentication.lib';
     require 'db.lib';
-    if(!$connection = @ mysqli_connect("localhost", "root"))
+    if(!$connection = @ mysqli_connect("localhost", "root", "","db"))
         die("Cannot connect to database");
     
     // Clean data from login
     
-$username = mysqlclean($_POST, 'username', 10, $connection);
-$password = mysqlclean($_POST, 'password', 10, $connection);
+$username = $_POST['username'];
+$password = $_POST['password'];
         
     session_start();
     // Validate username and password
@@ -15,7 +15,7 @@ $password = mysqlclean($_POST, 'password', 10, $connection);
         $_SESSION["username"] = $username;
         $_SESSION["loginIP"] = $_SERVER["REMOTE_ADDR"];
         header("Location: index.html");
-        exit;
+        
     }
     else {
         header("Location: login.html");
