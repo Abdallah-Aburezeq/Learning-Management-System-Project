@@ -22,16 +22,16 @@ CREATE TABLE students (
 CREATE TABLE professors (
   user_id int(9) NOT NULL,
   surname varchar(50),
-  firstname varchar(50)
+  firstname varchar(50),
   PRIMARY KEY (user_id)
 );
 
 
 CREATE TABLE classes (
   class_id int(5) NOT NULL,
-  class_name varchar(50) DEFAULT '' NOT NULL,
-  course_id varchar(8), NOT NULL,
-  class_professor varchar(50), NOT NULL,
+  class_name varchar(50) NOT NULL,
+  course_id varchar(8) NOT NULL,
+  class_professor varchar(50) NOT NULL,
   PRIMARY KEY (class_id),
   KEY var (class_name)
 );
