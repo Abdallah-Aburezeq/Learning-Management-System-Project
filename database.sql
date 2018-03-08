@@ -36,10 +36,12 @@ CREATE TABLE classes (
   KEY var (class_name)
 );
 
-INSERT INTO users VALUES (9001230123,  'boudreauxr2', 'toor');
+
 
 INSERT INTO students VALUES (9001230123,'Boudreaux','Ryan');
 
 INSERT INTO professors VALUES (6001230123,'Chang','Yuchou');
 
 INSERT INTO classes VALUES (23924,'Software Engineering','CS3420','Chang');
+
+INSERT INTO users SET user_id='900252117', user_name='boudreauxr2', password='8b6be699378084b989ced735204449a5';

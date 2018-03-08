@@ -1,7 +1,7 @@
 <?php
     require 'authentication.lib';
     require 'db.lib';
-    if(!$connection = @ mysqli_connect("localhost", "root", "","db"))
+    if(!$connection = @ mysqli_connect("localhost", "root", "","userdb"))
         die("Cannot connect to database");
     
     // Clean data from login
