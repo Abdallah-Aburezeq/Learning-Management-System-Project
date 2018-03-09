@@ -36,7 +36,67 @@ CREATE TABLE classes (
   KEY var (class_name)
 );
 
+create table C20409 (
+  user_id int(9) NOT NULL,
+  instructor_id int(9) NOT NULL,
+  assignment varchar(50) NOT NULL,
+  grade float(5),
+  PRIMARY KEY (user_id)
+);
 
+
+create table C21088 (
+  user_id int(9) NOT NULL,
+  instructor_id int(9) NOT NULL,
+  assignment varchar(50) NOT NULL,
+  grade float(5),
+  PRIMARY KEY (user_id)
+);
+
+
+create table C21820 (
+  user_id int(9) NOT NULL,
+  instructor_id int(9) NOT NULL,
+  assignment varchar(50) NOT NULL,
+  grade float(5),
+  PRIMARY KEY (user_id)
+);
+
+
+create table C23921 (
+  user_id int(9) NOT NULL,
+  instructor_id int(9) NOT NULL,
+  assignment varchar(50) NOT NULL,
+  grade float(5),
+  PRIMARY KEY (user_id)
+);
+
+
+create table C23921 (
+  user_id int(9) NOT NULL,
+  instructor_id int(9) NOT NULL,
+  assignment varchar(50) NOT NULL,
+  grade float(5),
+  PRIMARY KEY (user_id)
+);
+
+
+create table C23924 (
+  user_id int(9) NOT NULL,
+  instructor_id int(9) NOT NULL,
+  assignment varchar(50) NOT NULL,
+  grade float(5),
+  PRIMARY KEY (user_id)
+);
+
+
+create table C24015 (
+  user_id int(9) NOT NULL,
+  instructor_id int(9) NOT NULL,
+  assignment varchar(50) NOT NULL,
+  grade float(5),
+  PRIMARY KEY (user_id)
+);
 
 INSERT INTO students VALUES (9001230123,'Boudreaux','Ryan');
 
