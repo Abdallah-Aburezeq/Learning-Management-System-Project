@@ -42,6 +42,12 @@ INSERT INTO students VALUES (9001230123,'Boudreaux','Ryan');
 
 INSERT INTO professors VALUES (6001230123,'Chang','Yuchou');
 
+INSERT INTO classes VALUES (20409,"English", "ENG2301", "Chang");
 INSERT INTO classes VALUES (23924,'Software Engineering','CS3420','Chang');
+INSERT INTO classes VALUES (24015, "Philosophy", "Phil1301", "Chang");
+INSERT INTO classes VALUES (21820, "Operating Systems", "CS4315", "Chang");
+INSERT INTO classes VALUES (23920, "Internet of Things", "CS4390", "Chang");
+INSERT INTO classes VALUES (23921, "Programming Language Concepts", "CS4303", "Chang");
+INSERT INTO classes VALUES (21088, "Senior Seminar", "CS4380", "Chang");
 
 INSERT INTO users SET user_id='900252117', user_name='boudreauxr2', password='8b6be699378084b989ced735204449a5';
