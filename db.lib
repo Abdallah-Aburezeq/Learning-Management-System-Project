@@ -1,10 +1,10 @@
 <?php
    $hostName = "localhost";
-   $databaseName = "logindb";
+   $databaseName = "db";
 
    function showerror()
    {
-      die("Error " . mysqli_errno() . " : " . mysql_error());
+      die("Error: Something Happened");
    }
 
    function mysqlclean($array, $index, $maxlength, $connection)
@@ -12,7 +12,7 @@
      if (isset($array["{$index}"]))
      {
         $input = substr($array["{$index}"], 0, $maxlength);
-        $input = mysql_real_escape_string($input, $connection);
+        $input = mysqli_real_escape_string($connection, $input);
         return ($input);
      }
      return NULL;
